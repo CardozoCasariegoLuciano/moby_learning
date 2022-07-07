@@ -5,6 +5,7 @@ import { CountryComponent } from './pages/country/country.component';
 import { RegionComponent } from './pages/region/region.component';
 import { SingleCountryComponent } from './pages/single-country/single-country.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -23,6 +24,7 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     FormsModule,
+    RouterModule,
     CommonModule,
   ]
 })

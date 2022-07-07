@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RESTCountriesResponse} from '../../interfaces/country.interface';
 import { CountryService } from '../../services/country.service';
 
 @Component({
@@ -10,12 +11,22 @@ export class CountryComponent {
   constructor(private countryService: CountryService) {}
 
   termino: string = '';
+  isError: boolean = false;
+  countries: RESTCountriesResponse[] = []
 
   buscar() {
+    this.isError = false;
     if (this.termino.length === 0) return;
 
-    this.countryService.searchCountry(this.termino).subscribe((resp: any) => {
-      console.log(resp);
-    });
+    this.countryService.searchCountry(this.termino).subscribe(
+      (resp) => {
+        this.countries = resp
+      },
+      (error) => {
+        this.isError = true;
+        this.countries = []
+      }
+    );
+
   }
 }
