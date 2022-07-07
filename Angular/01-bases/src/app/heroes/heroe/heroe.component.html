@@ -1,0 +1,19 @@
+
+<h1>Heroe component Works</h1>
+
+<dl>
+    <td>Nombre</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Edad</td>
+    <dd>{{edad}}</dd>
+
+    <td>Nombre completo</td>
+    <dd>{{obtenerNombre()}}</dd>
+
+    <td>Nombre Upper</td>
+    <dd>{{nombreUpperCase}}</dd>
+</dl>
+
+<button (click)="cambiarNombre('Batman')">Cambiar Heroe</button>
+<button (click)="cambiarEdad(38)">Cambiar Edad</button>
