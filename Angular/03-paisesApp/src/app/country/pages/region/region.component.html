@@ -1,1 +1,25 @@
-<p>region works!</p>
+<h3>
+  Buscar por region <small>{{ regionActive | uppercase }}</small>
+</h3>
+<hr />
+
+<h5>Seleccione la region</h5>
+
+<div class="row">
+  <div class="col">
+    <button
+      *ngFor="let region of regions"
+      class="btn m-1"
+      [class] = "getCSSclasses(region)"
+      (click)="activeRegion(region)"
+    >
+      {{ region | uppercase }}
+    </button>
+  </div>
+</div>
+
+<div *ngIf="countries.length > 0" class="row">
+  <div class="col mt-3">
+    <app-countries-table [countries]="countries"></app-countries-table>
+  </div>
+</div>

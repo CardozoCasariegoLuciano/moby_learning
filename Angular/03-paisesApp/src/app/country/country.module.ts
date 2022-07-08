@@ -6,6 +6,8 @@ import { RegionComponent } from './pages/region/region.component';
 import { SingleCountryComponent } from './pages/single-country/single-country.component';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import { CountriesTableComponent } from './components/countries-table/countries-table.component';
+import { CountriesInputComponent } from './components/countries-input/countries-input.component';
 
 
 
@@ -14,7 +16,9 @@ import {RouterModule} from '@angular/router';
     CapitalComponent,
     CountryComponent,
     RegionComponent,
-    SingleCountryComponent
+    SingleCountryComponent,
+    CountriesTableComponent,
+    CountriesInputComponent
   ],
   exports: [
     CapitalComponent,
