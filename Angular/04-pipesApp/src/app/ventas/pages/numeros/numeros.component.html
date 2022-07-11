@@ -1,0 +1,26 @@
+<div>
+  <h1>Pipes Numericos</h1>
+  <p>Pipes incluidos en angula - Usualmente en el module CommonModule</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Ventas netas" subheader="del presente año">
+        <i class="pi pi-dollar"></i>
+        {{ventasNetas |number:".2-2"}}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Ventas brutas" subheader="del presente año">
+        {{ventasNetas | currency:"ARG"}}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="Ganancia porcentual" subheader="del presente año">
+        {{porcentaje |percent:".2-2"}}
+    </p-card>
+  </div>
+</div>
+

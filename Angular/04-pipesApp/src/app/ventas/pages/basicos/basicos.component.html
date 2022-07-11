@@ -1,0 +1,72 @@
+<div>
+  <h1>Pipes basicos</h1>
+  <p>Pipes incluidos en angula - Usualmente en el module CommonModule</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="LowerCase" subheader="| lowercase">
+      <p>Original: "HOLAAA"</p>
+      Final: {{ "HOLAAA" | lowercase }}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="UpperCase" subheader="| uppercase">
+      <p>Original: "holaaa"</p>
+      Final: {{ "holaaa" | uppercase }}
+    </p-card>
+  </div>
+
+  <div class="col-4">
+    <p-card header="TitleCase" subheader="| titlecase">
+      <p>Original: "hOLaa coMo eSTAS"</p>
+      Final: {{ "hOLaa coMo eSTAS" | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div>
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para mostrar las fechas</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card subheader="Codigo"
+      ><ul>
+        <li>Fecha</li>
+        <li>Fecha | date</li>
+        <li>Fecha | date:"short"</li>
+        <li>Fecha | date:"long"</li>
+        <li>Fecha | date:"YYYY"</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>Fecha | date:"long":"GMT-1"</li>
+        <li>Fecha | date:"long":"GMT-1":"es-AR"</li>
+        <li>Fecha | date:"long":"GMT-1":"en"</li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card subheader="Resultado"
+      ><ul>
+        <li>{{ fecha }}</li>
+        <li>{{ fecha | date }}</li>
+        <li>{{ fecha | date: "short" }}</li>
+        <li>{{ fecha | date: "long" }}</li>
+        <li>{{ fecha | date: "YYYY" }}</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>{{ fecha | date: "long":"GMT-1" }}</li>
+        <li>{{ fecha | date:"long":"GMT-1":"es-AR" }}</li>
+        <li>{{ fecha | date:"long":"GMT-1":"en" }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
