@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import {AppRouterModule} from './app-router.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {AppRouterModule} from './app-router.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRouterModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
