@@ -8,6 +8,9 @@ export class HeroeImagenPipe implements PipeTransform {
 
   transform(value: Heroe): string {
 
+    if (!value.id && !value.alt_img || value.alt_img === "") {
+      return "assets/no-image.png"
+    }
     if (value.alt_img) {
       return value.alt_img
     }
