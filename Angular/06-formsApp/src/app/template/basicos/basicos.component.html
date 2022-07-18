@@ -1,0 +1,81 @@
+<h2>Template: Basicos</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form (ngSubmit)="guardar()"
+          #miFormulario="ngForm">
+      <!-- Producto -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Producto</label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre del producto"
+            ngModel
+            name="producto"
+            required="true"
+            minlength="3"
+          />
+          <span
+            *ngIf="nombreValido()"
+            class="form-text text-danger"
+            >Debe de ser de 3 letras</span
+          >
+        </div>
+      </div>
+      <!-- end Producto -->
+
+      <!-- Precio -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Precio</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="precio del producto"
+            ngModel
+            name="precio"
+            required="true"
+            min="0"
+
+
+          />
+          <span
+          *ngIf="precioValido()"
+          class="form-text text-danger"
+          >El precio debe ser mayor o igual a 0</span
+        >
+        </div>
+      </div>
+      <!-- end precio -->
+
+      <!-- Existencias -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Existencias</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Cantidad del proucto"
+            ngModel
+            name="existencias"
+            required="true"
+            customMin
+            [minimo] = "0"
+          />
+        </div>
+      </div>
+      <!-- end Existencias -->
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary float-end" type="submit" [disabled]="miFormulario.invalid">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
