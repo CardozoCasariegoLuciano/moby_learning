@@ -1,0 +1,110 @@
+<h2>Validaciones Reactivas</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form autocomplete="off" [formGroup]="miFormulario">
+      <!--Nombre-->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Nombre </label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre del usuario"
+            formControlName="nombre"
+          />
+
+          <span class="form-text text-danger" *ngIf="isValidField('nombre')">
+            Se espera un nombre y un apellido</span
+          >
+        </div>
+      </div>
+
+      <!--User name-->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> User Name </label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nick name del usuario"
+            formControlName="username"
+          />
+
+          <span class="form-text text-danger" *ngIf="isValidField('username')">
+            El username no puede ser Yadk</span>
+        </div>
+      </div>
+
+      <!--Email-->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Email </label>
+        <div class="col-sm-9">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email del usuario"
+            formControlName="email"
+          />
+
+          <span class="form-text text-danger" *ngIf="isValidField('email')">
+            {{emailerror}}            
+          </span>
+        </div>
+      </div>
+
+      <!--Password-->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Password </label>
+        <div class="col-sm-9">
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Password del usuario"
+          />
+
+          <span class="form-text text-danger" *ngIf="isValidField('password')"
+            >Se espera una contraseña valida</span
+          >
+        </div>
+      </div>
+
+      <!--repeated password-->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"> Confirm password </label>
+        <div class="col-sm-9">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Repita el password"
+            formControlName="confirmPassword"
+          />
+
+          <span class="form-text text-danger" *ngIf="isValidField('confirmPassword')"
+            >Se espera que repita la misma contraseña</span
+          >
+        </div>
+      </div>
+
+      <button
+        class="btn btn-primary float-end"
+        (click)="enviarFormulario()"
+        type="submit"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+
+<h5>Is valid: {{ miFormulario.valid }}</h5>
+<h5>status: {{ miFormulario.status }}</h5>
+<br />
+
+<h5>Valores</h5>
+<pre>{{ miFormulario.value | json }}</pre>
+
+<h5>errores del campo Email</h5>
+<pre>{{ miFormulario.controls["email"].errors | json }}</pre>

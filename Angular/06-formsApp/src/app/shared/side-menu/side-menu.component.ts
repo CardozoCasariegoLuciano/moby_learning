@@ -42,4 +42,15 @@ export class SideMenuComponent {
       ruta: "/reactive/switches",
     },
   ]
+
+    validationMenus: ImenuItem[] = [
+    {
+      texto: "Login",
+      ruta: "/auth/login",
+    },
+    {
+      texto: "register",
+      ruta: "/auth/register",
+    },
+  ]
 }
