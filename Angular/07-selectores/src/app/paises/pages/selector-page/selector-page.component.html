@@ -1,0 +1,62 @@
+<h3 class="mt-5">Selectores anidados</h3>
+<hr />
+
+<form [formGroup]="myForm" (submit)="guardar()">
+
+  <!-- Region -->
+  <div class="row">
+    <div class="col">
+      <label class="form-label">Continente:</label>
+      <select class="form-control" formControlName="region">
+        <option value="">-- Seleccione un continente --</option>
+        <option 
+        *ngFor="let region of regiones"
+        [value]="region">{{region | titlecase}}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Pais -->
+  <div class="row" *ngIf="paises.length > 0">
+    <div class="col">
+      <label class="form-label">Pais:</label>
+      <select class="form-control" formControlName="pais">
+        <option value="">-- Seleccione un Pais --</option>
+        <option 
+        *ngFor="let pais of paises"
+        [value]="pais.cca3">{{pais.name.common}}</option>
+      </select>
+    </div>
+  </div>
+
+   <!-- Fronteras -->
+   <div class="row" *ngIf="fronteras.length > 0">
+    <div class="col">
+      <label class="form-label">Fronteras:</label>
+      <select class="form-control" formControlName="fronteras">
+        <option value="">-- Seleccione un Pais --</option>
+        <option 
+        *ngFor="let frontera of fronteras"
+        [value]="frontera">{{frontera}}</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="row" *ngIf="cargando">
+    <div class="col">
+        Cargando...
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <button class="btn btn-primary float-end" type="submit">Guardar</button>
+    </div>
+  </div>
+</form>
+
+
+<h4>isValid Form {{myForm.valid }}</h4>
+
+<h4>Form</h4>
+<pre>{{myForm.value | json}}</pre>
