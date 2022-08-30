@@ -8,3 +8,5 @@ numeros
   next: (val) => console.log("next: ", val),
   complete: () => console.log("complete"),
 });
+
+// Take(N): termina la subscripción luego de dejar pasar N emisiones

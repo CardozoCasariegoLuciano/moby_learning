@@ -7,3 +7,5 @@ obs.subscribe(
   null,
   () => console.log("terminamoss")
 );
+
+//retorna el valor que le paso por parametro en forma de observable

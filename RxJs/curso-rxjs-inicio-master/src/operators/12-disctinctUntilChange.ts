@@ -40,3 +40,7 @@ from(personajes)
     distinctUntilChanged((anterior, actual) => anterior.name === actual.name)
   )
   .subscribe(console.log);
+
+
+  //DistinctUntilChanged: Similar al distinct, pero este no se fita en toodas las emisiones 
+  // anteriores, solo en la anterior inmediata

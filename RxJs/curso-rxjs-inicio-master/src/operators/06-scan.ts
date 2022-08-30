@@ -28,3 +28,6 @@ const state$ = from(user).pipe(
 const id$ = state$.pipe(map((state) => state));
 
 id$.subscribe(console.log);
+
+
+// Es como un reduce 

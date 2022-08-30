@@ -25,3 +25,10 @@ input$
   )
   .subscribe(console.log);
 
+
+  // ThrottleTime(MILISECONS): ignora los siguientes valores emitidos durante MILISECONS
+
+  //Ejemplo throttleTime(1000):
+  // Luego de emititr un valor, durante los siguientes 1000ms (1segundo) todos los
+  // valores que se emitan seran ignorados, luego del segundo, queda atento al proximo
+  // valor para dejarlo pasar y repetir el proceso

@@ -17,3 +17,9 @@ counter
         next: (val) => console.log("Next", val),
         complete: () => console.log("completado"),
     });
+
+
+//TakeUltil(OBS$) : requiere por parametro otro observable. ya que takeUntil retorna 
+// todos los valores hasta que OBS$ emita un valor, en ese caso se termina la subscripción
+
+//Skip(NUMBER): se salta los primeros NUMBER emisiones

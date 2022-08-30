@@ -6,9 +6,9 @@ import { filter } from "rxjs/operators";
 //.subscribe(console.log);
 
 type DC = {
-  typo :string,
-  nombre: string,
-}
+  typo: string;
+  nombre: string;
+};
 
 const personajes: DC[] = [
   {
@@ -27,12 +27,13 @@ const personajes: DC[] = [
   },
 ];
 
-
 const soloHeroes = from(personajes).pipe(
   filter((char) => {
     return char.typo === "Heroe";
   })
-)
+);
+
+soloHeroes.subscribe(console.log);
 
 
-soloHeroes.subscribe(console.log)
+// Filter: filtra los valores que le indique dah

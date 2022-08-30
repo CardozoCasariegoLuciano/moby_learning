@@ -11,3 +11,8 @@ click
     next: (val) => console.log("valor", val),
     complete: () => console.log("terminado"),
   });
+
+
+  //first(CONDITION) : emite todos los valores hasta que alguno cumple la CONDITION,
+  // en ese momento se termina la subscripción (first: toma el  primero que cumpla)
+  //  si no pongo nada en la CONDITION solo retorna el primero valor emitido

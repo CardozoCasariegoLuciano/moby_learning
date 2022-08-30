@@ -10,3 +10,5 @@ const observer = {
 
 obs1.subscribe(observer);
 obs2.subscribe(observer);
+
+// El fromEvent crea eventos a partir de acciones en elementos del DOM (click, scroll, keyup)

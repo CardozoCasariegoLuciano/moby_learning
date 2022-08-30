@@ -35,3 +35,6 @@ setTimeout(() => {
     subject.complete()
     intervalSubject.unsubscribe()
 }, 3500);
+
+
+//El Subject esta bueno para que varios observers reciban  el mismo valor emitido

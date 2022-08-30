@@ -20,3 +20,8 @@ const onKeyUpMapTo = fromEvent<KeyboardEvent>(document, "keyup").pipe(
     mapTo("tecla presionada")
 );
 onKeyUpMapTo.subscribe((ret) => console.log("MapTo: ", ret))
+
+
+// Map: el operador map modifica el valor que recibe y lo retorna (afectando así a los operadores siguientes)
+// Pluck: si son objetos, retorna solamente la key que le indique, si hay mas valores es porque son sub-keys
+// mapTo: transforma la entrada en una salida especifica (no es muy interesante) 

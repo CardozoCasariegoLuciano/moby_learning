@@ -11,3 +11,9 @@ click
     next: (val) => console.log("value", val),
     complete: () => console.log("Terminado"),
   });
+
+
+
+  //TakeWhile(CONDITION) : Similar al Firts, pero este no solo toma al primero,
+  // emite todos los valores mientras se cumpla la CONDITION, si alguno no la 
+  // cumple, se completa la subscripción

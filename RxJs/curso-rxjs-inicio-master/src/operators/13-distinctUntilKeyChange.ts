@@ -33,3 +33,7 @@ from(personajes)
     distinctUntilKeyChanged("name")
   )
   .subscribe(console.log);
+
+
+  //Exanctamente igual al anterior, solo que este es para objetos, en este 
+  // ejemplo se fija si cambia el valor de la key "nombre"

@@ -16,3 +16,5 @@ input$
   )
   .subscribe(console.log);
 
+
+  //DebounceTime(MILISECONS): manda el ultimo valor emitido luego de MILISECONS

@@ -37,3 +37,6 @@ const personajes: Personaje[] = [
 
 
 from(personajes).pipe(distinct(val => val.name)).subscribe(console.log)
+
+
+//Distinct: Solo deja pasar valores que no hayan sido previamente emitidos por el observer
