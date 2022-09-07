@@ -3,7 +3,7 @@ import { IncrementadorComponent } from './incrementador.component';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
-fdescribe('Incremendator Component', () => {
+describe('Incremendator Component', () => {
   let component: IncrementadorComponent;
   let fixture: ComponentFixture<IncrementadorComponent>;
 
