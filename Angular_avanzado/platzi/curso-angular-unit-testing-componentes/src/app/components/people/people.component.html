@@ -1,0 +1,4 @@
+<section class="container">
+  <h3>{{ people.length }} Persons</h3>
+  <app-person *ngFor="let person of people" [person]="person" (onSelected)="showPerson($event)"></app-person>
+</section>
